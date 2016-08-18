@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mail Analytics Tool</title>
+		<link href='css/index.css' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class='container text-center'>
+			<br/><br/>
+			
+			<h1>Mail Analytics Tool</h2>
+			<br/><br/>
+			
+			<table class='table table-striped table-border'>
+				<tr>
+					<th class='text-center'>Type</th>
+					<th class='text-center'>Emails Sent</th>
+					<th class='text-center'>Emails Opened</th>
+					<th class='text-center'>Links Clicked</th>
+				</tr>
+				<% @stats.each do |key,value| %>
+					<tr>
+						<td><%= key %></td>
+						<td><%= value[:qty] %></td>
+						<td><%= "%g" % value[:opened] %>%</td>
+						<td><%= "%g" % value[:clicked] %>%</td>
+					</tr>
+				<% end %>
+				<tr>
+					<td>Total</td>
+					<td><%= @totals[:qty] %></td>
+					<td><%= @totals[:opened] %>%</td>
+					<td><%= @totals[:clicked] %>%</td>
+				</tr>
+			</table>
+
+		</div>
+	</body>
+</html>
+
+  <!--       @stats[:order] += 1 if item[:EmailType] == 'Order'
+        @stats[:user_confirmation] += 1 if item[:EmailType] == 'UserConfirmation'
+        @stats[:shipment] += 1 if item[:EmailType] == 'Shipment'
+        @stats[:refer_a_friend] += 1 if item[:EmailType] == 'ReferAFriend'
+        @stats[:get_a_book_discount] += 1 if item[:EmailType] == 'GetABookDiscount' -->
