@@ -46,3 +46,7 @@ To run the unit and feature tests, please navigate to the root directory and run
 ```sh
 $ rspec
 ```
+
+## Notes
+
+Didn't manage to catch the data from Llirdnam.
