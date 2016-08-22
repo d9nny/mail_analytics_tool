@@ -2,14 +2,15 @@
 
 ## About
 Implement a web application in Ruby that:
+
 1. Can receive web hooks from Mandrill (Llirdnam)
 2. Processes the web hook data and stores it into a suitable data store
 3. Displays the following statistics
-		* Total number of emails sent
-		* Total number of emails opened
-		* Total number of clicks
-		* Open rate per email type
-		* Click rate per email type
+	- Total number of emails sent
+	- Total number of emails opened
+	- Total number of clicks
+	- Open rate per email type
+	- Click rate per email type
 
 ## Usage
 
@@ -45,9 +46,3 @@ To run the unit and feature tests, please navigate to the root directory and run
 ```sh
 $ rspec
 ```
-
-## Technologies used
-
-Ruby
-Sinatra
-TDD (via RSpec and Capybara)
